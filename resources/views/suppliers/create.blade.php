@@ -45,18 +45,28 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Razon social <span class="text-danger">*</span></label>
-                                    <input type="text" name="razonsocial" id="razonsocial" class="form-control" placeholder="Ingrese la razon social" required>
+                                    <label>Ruc <span class="text-danger">*</span></label>
+                                    <input type="text" name="ruc" id="razonsocial" class="form-control" placeholder="Ingrese la razon social">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Descripcion <span class="text-danger">*</span></label>
+                                    <input type="text" name="descripcion" id="phone" class="form-control" placeholder="Ingrese un telefono" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Direccion <span class="text-danger">*</span></label>
+                                    <input type="text" name="direccion" id="phone" class="form-control" placeholder="Ingrese un telefono" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Telefono <span class="text-danger">*</span></label>
-                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Ingrese un telefono" required>
+                                    <input type="text" name="telefono" id="phone" class="form-control" placeholder="Ingrese un telefono" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Estado <span class="text-danger">*</span></label>
-                                    <select name="status" id="status" class="form-control" required>
+                                    <select name="estado" id="estado" class="form-control" required>
                                         <option value="1" selected>habilitado</option>
                                         <option value="0">deshabilitado</option>
                                     </select>
@@ -69,7 +79,7 @@
 
                                 <div class="form-group">
                                     <label>Logo <span class="text-danger">*</span></label>
-                                    <input type="file" name="avatar" class="form-control{{ $errors->has('file') ? ' is-invalid' : '' }}" >
+                                    <input type="file" name="logo" class="form-control{{ $errors->has('file') ? ' is-invalid' : '' }}" >
                                     @if ($errors->has('file'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('file') }}</strong>

@@ -12,4 +12,13 @@ class PermissionRole extends Model
      * @var string
      */
     protected $table = 'permission_role';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'role_id','permission_id'
+    ];
 }

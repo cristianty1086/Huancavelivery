@@ -36,7 +36,7 @@
                         <div class="col-sm-6">
 
 
-                            <form action="{{ route('suppliers.update',$supplier->id) }}" method="POST">
+                            <form action="{{ route('categories.update',$supplier->id) }}" method="POST">
                                 @csrf
                                 @method('PUT')
 

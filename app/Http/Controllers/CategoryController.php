@@ -44,7 +44,18 @@ class CategoryController extends BaseController
         //
         $input = $request->all();
         $request->validate([
+            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required',
+            'descripcion' => 'required',
         ]);
+
+        if ($request->file('imagen')) {
+            $imagePath = $request->file('imagen');
+            $imageName = $imagePath->getClientOriginalName();
+            $imageNameUnique = uniqid().".".$imagePath->getClientOriginalExtension();
+            $path = $request->file('imagen')->storeAs('uploads', $imageNameUnique, 'public');
+            $input['imagen'] = '/storage/'.$path;
+          }
         $items = Category::create($input);
         return redirect()->route('categories.index')
                 ->with('�Exito!','Category creado con exito.');
@@ -90,7 +101,18 @@ class CategoryController extends BaseController
         //
         $input = $request->all();
         $request->validate([
+            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required',
+            'descripcion' => 'required',
         ]);
+
+        if ($request->file('imagen')) {
+            $imagePath = $request->file('imagen');
+            $imageName = $imagePath->getClientOriginalName();
+            $imageNameUnique = uniqid().".".$imagePath->getClientOriginalExtension();
+            $path = $request->file('imagen')->storeAs('uploads', $imageNameUnique, 'public');
+            $user->avatar = '/storage/'.$path;
+          }
         $category->update($request->all());
         return redirect()->route('categories.index')
                 ->with('�Exito!','Category actualizado con �xito.');

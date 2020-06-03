@@ -36,7 +36,7 @@
                         <div class="col-sm-6">
 
 
-                            <form action="{{ route('roles.update',$role->id) }}" method="POST">
+                            <form action="{{ route('categories.update',$role->id) }}" method="POST">
                                 @csrf
                                 @method('PUT')
 

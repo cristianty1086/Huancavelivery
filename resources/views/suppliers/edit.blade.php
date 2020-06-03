@@ -46,20 +46,30 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Razon social <span class="text-danger">*</span></label>
-                                    <input type="text" name="razonsocial" id="razonsocial" class="form-control" value="{{ $supplier->razonsocial }}"  placeholder="Ingrese la razon social" required>
+                                    <label>Ruc <span class="text-danger">*</span></label>
+                                    <input type="text" name="ruc" id="razonsocial" class="form-control" value="{{ $supplier->ruc }}"  placeholder="Ingrese la razon social" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Descripcion <span class="text-danger">*</span></label>
+                                    <input type="text" name="descripcion" id="phone" class="form-control" value="{{ $supplier->descripcion }}" placeholder="Ingrese un telefono" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Direccion <span class="text-danger">*</span></label>
+                                    <input type="text" name="direccion" id="phone" class="form-control" value="{{ $supplier->direccion }}" placeholder="Ingrese un telefono" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Telefono <span class="text-danger">*</span></label>
-                                    <input type="text" name="phone" id="phone" class="form-control" value="{{ $supplier->phone }}"  placeholder="Ingrese un telefono" required>
+                                    <input type="text" name="phone" id="phone" class="form-control" value="{{ $supplier->telefono }}"  placeholder="Ingrese un telefono" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Estado <span class="text-danger">*</span></label>
-                                    <select name="status" id="status" class="form-control" required>
+                                    <select name="estado" id="status" class="form-control" required>
                                         <?php
-                                        if($supplier->status == 1){
+                                        if($supplier->estado == 1){
                                         ?>
                                             <option value="1" selected>habilitado</option>
                                             <option value="0">deshabilitado</option>

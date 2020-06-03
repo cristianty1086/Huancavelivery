@@ -44,7 +44,23 @@ class SupplierController extends BaseController
         //
         $input = $request->all();
         $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'estado'=>'required',
+            'ruc'=>'required',
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'descripcion'=>'required',
+            'direccion'=>'required',
+            'telefono'=>'required',
         ]);
+
+        if ($request->file('logo')) {
+            $imagePath = $request->file('logo');
+            $imageName = $imagePath->getClientOriginalName();
+            $imageNameUnique = uniqid().".".$imagePath->getClientOriginalExtension();
+            $path = $request->file('logo')->storeAs('uploads', $imageNameUnique, 'public');
+            $input['logo'] = '/storage/'.$path;
+          }
         $items = Supplier::create($input);
         return redirect()->route('suppliers.index')
                 ->with('�Exito!','Supplier creado con exito.');
@@ -90,7 +106,23 @@ class SupplierController extends BaseController
         //
         $input = $request->all();
         $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'estado'=>'required',
+            'ruc'=>'required',
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'descripcion'=>'required',
+            'direccion'=>'required',
+            'telefono'=>'required',
         ]);
+
+        if ($request->file('logo')) {
+            $imagePath = $request->file('logo');
+            $imageName = $imagePath->getClientOriginalName();
+            $imageNameUnique = uniqid().".".$imagePath->getClientOriginalExtension();
+            $path = $request->file('logo')->storeAs('uploads', $imageNameUnique, 'public');
+            $user->avatar = '/storage/'.$path;
+          }
         $supplier->update($request->all());
         return redirect()->route('suppliers.index')
                 ->with('�Exito!','Supplier actualizado con �xito.');

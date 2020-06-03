@@ -1,12 +1,12 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Huancavelivery <sup>1</sup></div>
+        <div class="sidebar-brand-text mx-3">Huancavelivery <sup></sup></div>
     </a>
 
     <!-- Divider -->
@@ -14,9 +14,9 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/home">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span>Tablero principal</span></a>
     </li>
 
     <!-- Divider -->
@@ -44,40 +44,24 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"></h6>
             <a class="collapse-item" href="{{ route('users.index') }}">Clientes</a>
-            <a class="collapse-item" href="{{ route('suppliers.index') }}">Negocios</a>
         </div>
         </div>
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        <a class="nav-link collapsed" href="{{ route('orders.index') }}" >
         <i class="fas fa-fw fa-folder"></i>
-        <span>Servicios</span>
+        <span>Pedidos</span>
         </a>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"></h6>
-            <a class="collapse-item" href="{{ route('orders.index') }}">Realizados</a>
-        </div>
-        </div>
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+        <a class="nav-link collapsed" href="{{ route('suppliers.index') }}"  >
         <i class="fas fa-fw fa-folder"></i>
-        <span>Pagos</span>
+        <span>Tiendas o negocios</span>
         </a>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Del cliente:</h6>
-            <a class="collapse-item" href="login.html">Pagos realizados</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Al ofertante:</h6>
-            <a class="collapse-item" href="404.html">Pagos realizados</a>
-        </div>
-        </div>
     </li>
 
     <!-- Divider -->
@@ -85,7 +69,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Addons
+        Adicionales
     </div>
 
     <!-- Nav Item - Utilities Collapse Menu -->
@@ -97,6 +81,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Opciones:</h6>
+            <a class="collapse-item" href="{{ route('categories.index') }}">Categorias</a>
+            <a class="collapse-item" href="#">Otros</a>
         </div>
         </div>
     </li>

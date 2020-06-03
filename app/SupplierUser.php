@@ -12,4 +12,13 @@ class SupplierUser extends Model
      * @var string
      */
     protected $table = 'supplier_user';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'supplier_id','user_id'
+    ];
 }

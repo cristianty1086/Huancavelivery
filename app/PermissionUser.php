@@ -12,4 +12,13 @@ class PermissionUser extends Model
      * @var string
      */
     protected $table = 'permisssion_user';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'permission_id','user_id'
+    ];
 }

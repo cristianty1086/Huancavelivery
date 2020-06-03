@@ -20,7 +20,7 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Agregar rol</h1>
+              <h1 class="h3 mb-0 text-gray-800">Agregar categoria</h1>
             </div>
 
             <!-- Content Row -->
@@ -36,7 +36,7 @@
                         <div class="col-sm-6">
 
 
-                            <form action="{{ route('roles.store') }}" method="POST">
+                            <form action="{{ route('categories.store') }}" method="POST"  enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="form-group">
@@ -49,10 +49,20 @@
 
                                 <div class="form-group">
 
-                                    <label>Alias <span class="text-danger">*</span></label>
+                                    <label>Descripcion <span class="text-danger">*</span></label>
 
-                                    <input type="text" name="slug" id="slug" class="form-control" placeholder="Ingrese un alias" required>
+                                    <input type="text" name="descripcion" id="descripcion" class="form-control" placeholder="Ingrese un nombre" required>
 
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Imagen <span class="text-danger">*</span></label>
+                                    <input type="file" name="imagen" class="form-control{{ $errors->has('file') ? ' is-invalid' : '' }}" >
+                                    @if ($errors->has('file'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('file') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
 
                                 <div class="form-group">

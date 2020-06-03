@@ -9,7 +9,7 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Negocios</h1>
+              <h1 class="h3 mb-0 text-gray-800">Tiendas o negocios</h1>
               <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar reporte</a>
             </div>
 
@@ -29,10 +29,12 @@
                             <tr class="bg-primary text-white">
                                 <th>Id</th>
                                 <th class="text-center">Avatar</th>
-                                <th width="160px">Razon social</th>
+                                <th width="160px">RUC</th>
                                 <th class="text-center">Nombre</th>
                                 <th class="text-center">Telefono</th>
                                 <th class="text-center">Correo electrónico</th>
+                                <th class="text-center">Descripcion</th>
+                                <th class="text-center">Direccion</th>
                                 <th class="text-center">Estado</th>
                                 <th class="text-center">Accion</th>
                             </tr>
@@ -46,13 +48,15 @@
                             ?>
                             <tr>
                                 <td><?php echo $s;?></td>
-                                <td><img src="{{ asset($val->avatar) }}" alt="" title="" width="150px"></td>
-                                <td><?php echo $val['razonsocial'];?></td>
+                                <td><img src="{{ asset($val['logo']) }}" alt="" title="" width="150px"></td>
+                                <td><?php echo $val['ruc'];?></td>
                                 <td><?php echo $val['name'];?></td>
-                                <td><?php echo $val['phone'];?></td>
+                                <td><?php echo $val['telefono'];?></td>
                                 <td><?php echo $val['email'];?></td>
+                                <td><?php echo $val['descripcion'];?></td>
+                                <td><?php echo $val['direccion'];?></td>
                                 <td><?php
-                                    if($val['status']==1){
+                                    if($val['estado']==1){
                                         echo 'habilitado';
                                     }else{
                                         echo 'deshabilitado';
