@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\RoleUser;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\RoleUser as RoleUserResource;
 
@@ -47,7 +47,7 @@ class RoleUserController extends BaseController
         ]);
         $items = RoleUser::create($input);
         return redirect()->route('role_user.index')
-                ->with('¡Exito!','RoleUser creado con exito.');
+                ->with('ï¿½Exito!','RoleUser creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class RoleUserController extends BaseController
         ]);
         $roleUser->update($request->all());
         return redirect()->route('role_user.index')
-                ->with('¡Exito!','RoleUser actualizado con éxito.');
+                ->with('ï¿½Exito!','RoleUser actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class RoleUserController extends BaseController
         //
         $roleUser->delete();
         return redirect()->route('role_user.index')
-                ->with('¡Exito!','El RoleUser se quito con éxito.');
+                ->with('ï¿½Exito!','El RoleUser se quito con ï¿½xito.');
     }
 }

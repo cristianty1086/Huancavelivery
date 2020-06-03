@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\Category as CategoryResource;
 
@@ -47,7 +47,7 @@ class CategoryController extends BaseController
         ]);
         $items = Category::create($input);
         return redirect()->route('categories.index')
-                ->with('¡Exito!','Category creado con exito.');
+                ->with('ï¿½Exito!','Category creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class CategoryController extends BaseController
         ]);
         $category->update($request->all());
         return redirect()->route('categories.index')
-                ->with('¡Exito!','Category actualizado con éxito.');
+                ->with('ï¿½Exito!','Category actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class CategoryController extends BaseController
         //
         $category->delete();
         return redirect()->route('categories.index')
-                ->with('¡Exito!','El Category se quito con éxito.');
+                ->with('ï¿½Exito!','El Category se quito con ï¿½xito.');
     }
 }

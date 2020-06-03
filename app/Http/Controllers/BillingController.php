@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Billing;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\Billing as BillingResource;
 
@@ -47,7 +47,7 @@ class BillingController extends BaseController
         ]);
         $items = Billing::create($input);
         return redirect()->route('billings.index')
-                ->with('¡Exito!','Billing creado con exito.');
+                ->with('ï¿½Exito!','Billing creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class BillingController extends BaseController
         ]);
         $billing->update($request->all());
         return redirect()->route('billings.index')
-                ->with('¡Exito!','Billing actualizado con éxito.');
+                ->with('ï¿½Exito!','Billing actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class BillingController extends BaseController
         //
         $billing->delete();
         return redirect()->route('billings.index')
-                ->with('¡Exito!','El Billing se quito con éxito.');
+                ->with('ï¿½Exito!','El Billing se quito con ï¿½xito.');
     }
 }

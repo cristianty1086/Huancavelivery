@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Supplier;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\Supplier as SupplierResource;
 
@@ -47,7 +47,7 @@ class SupplierController extends BaseController
         ]);
         $items = Supplier::create($input);
         return redirect()->route('suppliers.index')
-                ->with('¡Exito!','Supplier creado con exito.');
+                ->with('ï¿½Exito!','Supplier creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class SupplierController extends BaseController
         ]);
         $supplier->update($request->all());
         return redirect()->route('suppliers.index')
-                ->with('¡Exito!','Supplier actualizado con éxito.');
+                ->with('ï¿½Exito!','Supplier actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class SupplierController extends BaseController
         //
         $supplier->delete();
         return redirect()->route('suppliers.index')
-                ->with('¡Exito!','El Supplier se quito con éxito.');
+                ->with('ï¿½Exito!','El Supplier se quito con ï¿½xito.');
     }
 }

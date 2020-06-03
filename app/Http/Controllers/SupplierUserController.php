@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\SupplierUser;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\SupplierUser as SupplierUserResource;
 
@@ -47,7 +47,7 @@ class SupplierUserController extends BaseController
         ]);
         $items = SupplierUser::create($input);
         return redirect()->route('supplier_user.index')
-                ->with('¡Exito!','SupplierUser creado con exito.');
+                ->with('ï¿½Exito!','SupplierUser creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class SupplierUserController extends BaseController
         ]);
         $supplierUser->update($request->all());
         return redirect()->route('supplier_user.index')
-                ->with('¡Exito!','SupplierUser actualizado con éxito.');
+                ->with('ï¿½Exito!','SupplierUser actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class SupplierUserController extends BaseController
         //
         $supplierUser->delete();
         return redirect()->route('supplier_user.index')
-                ->with('¡Exito!','El SupplierUser se quito con éxito.');
+                ->with('ï¿½Exito!','El SupplierUser se quito con ï¿½xito.');
     }
 }

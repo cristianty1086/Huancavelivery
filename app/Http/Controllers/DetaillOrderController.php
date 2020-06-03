@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DetaillOrder;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\DetaillOrder as DetaillOrderResource;
 
@@ -47,7 +47,7 @@ class DetaillOrderController extends BaseController
         ]);
         $items = DetaillOrder::create($input);
         return redirect()->route('detaill_orders.index')
-                ->with('¡Exito!','DetaillOrder creado con exito.');
+                ->with('ï¿½Exito!','DetaillOrder creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class DetaillOrderController extends BaseController
         ]);
         $detaillOrder->update($request->all());
         return redirect()->route('detaill_orders.index')
-                ->with('¡Exito!','DetaillOrder actualizado con éxito.');
+                ->with('ï¿½Exito!','DetaillOrder actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class DetaillOrderController extends BaseController
         //
         $detaillOrder->delete();
         return redirect()->route('detaill_orders.index')
-                ->with('¡Exito!','El DetaillOrder se quito con éxito.');
+                ->with('ï¿½Exito!','El DetaillOrder se quito con ï¿½xito.');
     }
 }

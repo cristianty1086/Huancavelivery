@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\PermissionRole;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\PermissionRole as PermissionRoleResource;
 
@@ -47,7 +47,7 @@ class PermissionRoleController extends BaseController
         ]);
         $items = PermissionRole::create($input);
         return redirect()->route('permission_role.index')
-                ->with('¡Exito!','PermissionRole creado con exito.');
+                ->with('ï¿½Exito!','PermissionRole creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class PermissionRoleController extends BaseController
         ]);
         $permissionRole->update($request->all());
         return redirect()->route('permission_role.index')
-                ->with('¡Exito!','PermissionRole actualizado con éxito.');
+                ->with('ï¿½Exito!','PermissionRole actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class PermissionRoleController extends BaseController
         //
         $permissionRole->delete();
         return redirect()->route('permission_role.index')
-                ->with('¡Exito!','El PermissionRole se quito con éxito.');
+                ->with('ï¿½Exito!','El PermissionRole se quito con ï¿½xito.');
     }
 }

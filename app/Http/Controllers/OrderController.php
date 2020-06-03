@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\Order as OrderResource;
 
@@ -47,7 +47,7 @@ class OrderController extends BaseController
         ]);
         $items = Order::create($input);
         return redirect()->route('orders.index')
-                ->with('¡Exito!','Order creado con exito.');
+                ->with('ï¿½Exito!','Order creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class OrderController extends BaseController
         ]);
         $order->update($request->all());
         return redirect()->route('orders.index')
-                ->with('¡Exito!','Order actualizado con éxito.');
+                ->with('ï¿½Exito!','Order actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class OrderController extends BaseController
         //
         $order->delete();
         return redirect()->route('orders.index')
-                ->with('¡Exito!','El Order se quito con éxito.');
+                ->with('ï¿½Exito!','El Order se quito con ï¿½xito.');
     }
 }

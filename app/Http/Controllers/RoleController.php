@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Role;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\Role as RoleResource;
 
@@ -47,7 +47,7 @@ class RoleController extends BaseController
         ]);
         $items = Role::create($input);
         return redirect()->route('roles.index')
-                ->with('¡Exito!','Role creado con exito.');
+                ->with('ï¿½Exito!','Role creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class RoleController extends BaseController
         ]);
         $role->update($request->all());
         return redirect()->route('roles.index')
-                ->with('¡Exito!','Role actualizado con éxito.');
+                ->with('ï¿½Exito!','Role actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class RoleController extends BaseController
         //
         $role->delete();
         return redirect()->route('roles.index')
-                ->with('¡Exito!','El Role se quito con éxito.');
+                ->with('ï¿½Exito!','El Role se quito con ï¿½xito.');
     }
 }

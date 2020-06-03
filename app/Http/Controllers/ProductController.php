@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
-use AppHttpControllersBaseController as BaseController;
+use App\Http\Controllers\BaseController as BaseController;
 use Validator;
 use AppHttpResources\Product as ProductResource;
 
@@ -47,7 +47,7 @@ class ProductController extends BaseController
         ]);
         $items = Product::create($input);
         return redirect()->route('products.index')
-                ->with('¡Exito!','Product creado con exito.');
+                ->with('ï¿½Exito!','Product creado con exito.');
     }
 
     /**
@@ -93,7 +93,7 @@ class ProductController extends BaseController
         ]);
         $product->update($request->all());
         return redirect()->route('products.index')
-                ->with('¡Exito!','Product actualizado con éxito.');
+                ->with('ï¿½Exito!','Product actualizado con ï¿½xito.');
     }
 
     /**
@@ -107,6 +107,6 @@ class ProductController extends BaseController
         //
         $product->delete();
         return redirect()->route('products.index')
-                ->with('¡Exito!','El Product se quito con éxito.');
+                ->with('ï¿½Exito!','El Product se quito con ï¿½xito.');
     }
 }
