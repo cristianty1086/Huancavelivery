@@ -47,7 +47,7 @@
                                 <td><img src="{{ asset($val->avatar) }}" alt="" title="" width="150px"></td>
                                 <td><?php echo $val['name'];?></td>
                                 <td><?php echo $val['email'];?></td>
-                                <td><?php echo $val['phone'];?></td>
+                                <td><?php echo $val['telefono'];?></td>
                                 <td><?php echo $val['roles'][0]->name;?></td>
                                 <td><?php
                                     if($val['estado']==1){

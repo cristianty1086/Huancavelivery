@@ -127,7 +127,7 @@ class UserController extends BaseController
           }
 
         $user->name = $request->name;
-        $user->telefono = $request->phone;
+        $user->telefono = $request->telefono;
         $user->estado = $request->status;
         $user->email = $request->email;
         $user->save();
