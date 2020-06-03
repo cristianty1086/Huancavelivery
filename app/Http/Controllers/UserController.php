@@ -113,7 +113,7 @@ class UserController extends BaseController
         $request->validate([
             'name' => 'required',
             'rol' => 'required',
-            'phone' => 'required',
+            'telefono' => 'required',
             'email' => 'required',
             'status' => 'required',
         ]);
