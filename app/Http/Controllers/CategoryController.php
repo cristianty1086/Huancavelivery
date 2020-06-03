@@ -101,7 +101,6 @@ class CategoryController extends BaseController
         //
         $input = $request->all();
         $request->validate([
-            'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name' => 'required',
             'descripcion' => 'required',
         ]);

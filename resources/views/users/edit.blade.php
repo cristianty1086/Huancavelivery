@@ -52,7 +52,7 @@
 
                                 <div class="form-group">
                                     <label>Teléfono <span class="text-danger">*</span></label>
-                                    <input type="text" name="phone" id="phone" class="form-control" value="{{ $user->phone }}" placeholder="Ingrese un teléfono" required>
+                                    <input type="text" name="telefono" id="phone" class="form-control" value="{{ $user->phone }}" placeholder="Ingrese un teléfono" required>
                                 </div>
 
                                 <div class="form-group">

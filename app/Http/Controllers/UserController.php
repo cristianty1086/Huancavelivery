@@ -116,7 +116,6 @@ class UserController extends BaseController
             'phone' => 'required',
             'email' => 'required',
             'status' => 'required',
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         if ($request->file('avatar')) {

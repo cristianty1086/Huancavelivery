@@ -110,7 +110,6 @@ class SupplierController extends BaseController
             'email'=>'required',
             'estado'=>'required',
             'ruc'=>'required',
-            'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'descripcion'=>'required',
             'direccion'=>'required',
             'telefono'=>'required',
