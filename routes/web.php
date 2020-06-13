@@ -16,6 +16,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index');
+Route::get('products/{supplier_id}', 'ProductController@lista')->name('products.lista');
+Route::get('guarniciones/{supplier_id}', 'GuarnicionController@lista')->name('guarniciones.lista');
+Route::get('ingredientes/{product_id}', 'IngredienteController@lista')->name('ingredientes.lista');
 
 Route::resource('users', 'UserController');
 Route::resource('categories', 'CategoryController');

@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Ingrediente;
 use Illuminate\Http\Request;
+use App\Http\Controllers\BaseController as BaseController;
+use Validator;
+use AppHttpResources\Ingrediente as IngredienteResource;
 
 class IngredienteController extends Controller
 {
@@ -14,6 +18,18 @@ class IngredienteController extends Controller
     public function index()
     {
         //
+    }
+
+    /**
+     * Display a listing of the resource para un supplier
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function lista($product_id)
+    {
+        //
+        $rows = Ingrediente::where('product_id',$product_id)->get();
+        return view('ingredientes.index',['data' => $rows]);
     }
 
     /**

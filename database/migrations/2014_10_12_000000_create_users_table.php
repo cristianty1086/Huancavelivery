@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('telefono',24)->nullable();
             $table->integer('estado')->default(1);
-            $table->string('avatar',128)->nullable();
+            $table->string('avatar',128)->nullable()->default("");
             $table->decimal('latitude',15,3)->default(0);
             $table->decimal('longitude',15,3)->default(0);
             $table->rememberToken();

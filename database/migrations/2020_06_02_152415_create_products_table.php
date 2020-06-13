@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('descripcion',128);
             $table->float('price');
             $table->float('descuento');
-            $table->string('imagen',128);
+            $table->string('imagen',128)->default("");
             $table->timestamps();
         });
     }

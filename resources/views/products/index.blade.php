@@ -9,7 +9,7 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Roles</h1>
+              <h1 class="h3 mb-0 text-gray-800">Productos</h1>
               <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar reporte</a>
             </div>
 
@@ -28,7 +28,12 @@
                         <thead>
                             <tr class="bg-primary text-white">
                                 <th>Id</th>
-                                <th >Nombre</th>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Descuento</th>
+                                <th>Ingredientes</th>
                                 <th class="text-center">Accion</th>
                             </tr>
                         </thead>
@@ -41,7 +46,17 @@
                             ?>
                             <tr>
                                 <td><?php echo $s;?></td>
-                                <td><?php echo $val['name'];?></td>
+                                <td><img src="{{ asset($val['imagen']) }}" alt="" title="" width="150px"></td>
+                                <td><?php echo $val['nombre'];?></td>
+                                <td><?php echo $val['descripcion'];?></td>
+                                <td><?php echo $val['price'];?></td>
+                                <td><?php echo $val['descuento'];?></td>
+                                <td align="center">
+                                    <form action="{{ route('ingredientes.lista',$val['id']) }}" method="GET">
+                                        <a class="btn btn-info" href="{{ route('ingredientes.lista',$val['id']) }}">Ingredientes</a>
+                                        @csrf
+                                    </form>
+                                </td>
                                 <td align="center">
                                     <form action="{{ route('roles.destroy',$val['id']) }}" method="POST">
 

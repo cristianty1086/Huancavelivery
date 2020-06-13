@@ -9,7 +9,7 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Tiendas o negocios</h1>
+              <h1 class="h3 mb-0 text-gray-800">Ingredientes</h1>
               <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generar reporte</a>
             </div>
 
@@ -22,21 +22,13 @@
                     </div>
                 @endif
                 <div class="card" style="width: 100%">
-                    <div class="card-header">Registro<a href="suppliers/create" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Agregar</a></div>
+                    <div class="card-header">Registro<a href="roles/create" class="float-right btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i> Agregar</a></div>
                     <div class="card-body">
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr class="bg-primary text-white">
                                 <th>Id</th>
-                                <th class="text-center">Avatar</th>
-                                <th width="160px">RUC</th>
-                                <th class="text-center">Nombre</th>
-                                <th class="text-center">Categoria</th>
-                                <th class="text-center">Estado</th>
-                                <th class="text-center">Descripcion</th>
-                                <th class="text-center">Direccion</th>
-                                <th class="text-center">Productos</th>
-                                <th class="text-center">Guarniciones</th>
+                                <th>Nombre</th>
                                 <th class="text-center">Accion</th>
                             </tr>
                         </thead>
@@ -49,30 +41,12 @@
                             ?>
                             <tr>
                                 <td><?php echo $s;?></td>
-                                <td><img src="{{ asset($val['logo']) }}" alt="" title="" width="150px"></td>
-                                <td><?php echo $val['ruc'];?></td>
                                 <td><?php echo $val['name'];?></td>
-                                <td><?php echo $val['category_id'];?></td>
-                                <td><?php if($val['estado'] == 1) echo "activo"; else echo "inhabilitado"?></td>
-                                <td><?php echo $val['descripcion'];?></td>
-                                <td><?php echo $val['direccion'];?></td>
                                 <td align="center">
-                                    <form action="{{ route('products.lista',$val['id']) }}" method="GET">
-                                        <a class="btn btn-info" href="{{ route('products.lista',$val['id']) }}">Productos</a>
-                                        @csrf
-                                    </form>
-                                </td>
-                                <td align="center">
-                                    <form action="{{ route('guarniciones.lista',$val['id']) }}" method="GET">
-                                        <a class="btn btn-info" href="{{ route('guarniciones.lista',$val['id']) }}">Guarniciones</a>
-                                        @csrf
-                                    </form>
-                                </td>
-                                <td align="center">
-                                    <form action="{{ route('suppliers.destroy',$val['id']) }}" method="POST">
+                                    <form action="{{ route('roles.destroy',$val['id']) }}" method="POST">
 
 
-                                        <a class="btn btn-primary" href="{{ route('suppliers.edit',$val['id']) }}">Editar</a>
+                                        <a class="btn btn-primary" href="{{ route('roles.edit',$val['id']) }}">Editar</a>
 
                                         @csrf
                                         @method('DELETE')

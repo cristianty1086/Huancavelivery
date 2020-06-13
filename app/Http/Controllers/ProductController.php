@@ -23,6 +23,18 @@ class ProductController extends BaseController
     }
 
     /**
+     * Display a listing of the resource para un supplier
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function lista($supplier_id)
+    {
+        //
+        $rows = Product::where('supplier_id',$supplier_id)->get();
+        return view('products.index',['data' => $rows]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

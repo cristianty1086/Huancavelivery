@@ -18,32 +18,32 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => "Bebidas",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240, 'food'),
+            //'imagen' => $faker->image('public/storage/category',240,240, 'food'),
         ]);
         DB::table('categories')->insert([
             'name' => "Comida",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240, 'food'),
+            //'imagen' => $faker->image('public/storage/category',240,240, 'food'),
         ]);
         DB::table('categories')->insert([
             'name' => "Farmacia",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240),
+            //'imagen' => $faker->image('public/storage/category',240,240),
         ]);
         DB::table('categories')->insert([
             'name' => "Mercado",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240),
+            //'imagen' => $faker->image('public/storage/category',240,240),
         ]);
         DB::table('categories')->insert([
             'name' => "Enviar y recoger",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240),
+            //'imagen' => $faker->image('public/storage/category',240,240),
         ]);
         DB::table('categories')->insert([
             'name' => "Regalos",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240),
+            //'imagen' => $faker->image('public/storage/category',240,240),
         ]);
     }
 }
