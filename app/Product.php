@@ -13,6 +13,22 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre','descripcion','price','descuento','imagen'
+        'supplier_id','nombre','descripcion','price','descuento','imagen'
     ];
+
+    /**
+     * Get the post that owns the comment.
+     */
+    public function supplier()
+    {
+        return $this->belongsTo('App\Supplier');
+    }
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function ingredientes()
+    {
+        return $this->hasMany('App\Ingrediente');
+    }
 }

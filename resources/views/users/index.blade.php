@@ -48,7 +48,7 @@
                                 <td><?php echo $val['name'];?></td>
                                 <td><?php echo $val['email'];?></td>
                                 <td><?php echo $val['telefono'];?></td>
-                                <td><?php echo $val['roles'][0]->name;?></td>
+                                <td><?php if(sizeof ($val['roles'])>0) echo $val['roles'][0]->slug;?></td>
                                 <td><?php
                                     if($val['estado']==1){
                                         echo 'habilitado';

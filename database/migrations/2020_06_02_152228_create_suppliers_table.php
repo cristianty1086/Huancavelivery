@@ -15,14 +15,15 @@ class CreateSuppliersTable extends Migration
     {
         Schema::create('suppliers', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->references('id')->on('categories');
             $table->string('name',64);
             $table->integer('estado')->default(1);
             $table->string('ruc',32)->nullable();
             $table->string('logo',128);
             $table->string('descripcion',255);
             $table->string('direccion',128);
-            $table->string('telefono',32);
-            $table->string('email',32);
+            $table->decimal('latitude',15,3)->default(0);
+            $table->decimal('longitude',15,3)->default(0);
             $table->timestamps();
         });
     }

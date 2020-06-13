@@ -17,4 +17,12 @@ class Order extends Model
     protected $fillable = [
         'shipment','cart','supplier_id','billing_id','user_id','estado','observacion','user_delivery_id','dia_entrega','hora_entrega'
     ];
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function detalle()
+    {
+        return $this->hasMany('App\DetailOrder');
+    }
 }

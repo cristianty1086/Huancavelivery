@@ -21,10 +21,10 @@ class CreateOrdersTable extends Migration
             $table->foreignId('billing_id')->references('id')->on('billings');
             $table->foreignId('user_id')->references('id')->on('users');
             $table->integer('estado')->default(1);
-            $table->string('observacion',128);
-            $table->bigInteger('user_delievry_id');
-            $table->date('dia_entrega');
-            $table->time('hora_entrega');
+            $table->string('observacion',128)->nullable();
+            $table->bigInteger('user_delievry_id')->nullable();
+            $table->date('dia_entrega')->nullable();
+            $table->time('hora_entrega')->nullable();
             $table->timestamps();
         });
     }

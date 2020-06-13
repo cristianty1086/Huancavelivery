@@ -22,4 +22,12 @@ class DetaillOrder extends Model
     protected $fillable = [
         'order_id','product_id','amount','price','discount','weight'
     ];
+
+    /**
+     * Get the post that owns the comment.
+     */
+    public function order()
+    {
+        return $this->belongsTo('App\Order');
+    }
 }

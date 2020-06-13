@@ -15,4 +15,17 @@ class Permission extends Model
     protected $fillable = [
         'name','slug'
     ];
+
+    public function users() {
+
+       return $this->belongsToMany('App\User');
+
+    }
+
+    public function roles() {
+
+        return $this->belongsToMany('App\Role');
+
+     }
+
 }

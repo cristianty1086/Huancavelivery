@@ -4,30 +4,29 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Guarnicion extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'categories';
+    protected $table = 'guarnicions';
 
-    //
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name','descripcion','imagen'
+        'supplier_id','name'
     ];
 
     /**
-     * Get the comments for the blog post.
+     * Get the post that owns the comment.
      */
-    public function suppliers()
+    public function supplier()
     {
-        return $this->hasMany('App\Supplier');
+        return $this->belongsTo('App\Supplier');
     }
 }

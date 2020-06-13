@@ -23,7 +23,8 @@ class UserController extends BaseController
         if(count($users)>0){
             foreach($users as $user)
             {
-                $user['roles'] = $user->roles;
+                $ur = $user->roles;
+                $user['roles'] = $ur;
             }
         }
         return view('users.index',['data' => $users]);
