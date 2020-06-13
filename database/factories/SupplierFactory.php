@@ -11,7 +11,7 @@ $factory->define(Supplier::class, function (Faker $faker) {
         'name' => $faker->name,
         'estado' => random_int(0,1),
         'ruc' => Str::random(11),
-        'logo' => $faker->image('public/storage/supplier',340,150, null, false),
+        'logo' => $faker->image('public/storage/supplier',340,150),
         'descripcion' => $faker->sentence,
         'direccion' => $faker->streetName,
         'latitude' => $faker->latitude(-12.065720,-12.046246),

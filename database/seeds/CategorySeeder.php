@@ -28,22 +28,22 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => "Farmacia",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240, null),
+            'imagen' => $faker->image('public/storage/category',240,240),
         ]);
         DB::table('categories')->insert([
             'name' => "Mercado",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240, null),
+            'imagen' => $faker->image('public/storage/category',240,240),
         ]);
         DB::table('categories')->insert([
             'name' => "Enviar y recoger",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240, null, false),
+            'imagen' => $faker->image('public/storage/category',240,240),
         ]);
         DB::table('categories')->insert([
             'name' => "Regalos",
             'descripcion' => Str::random(10),
-            'imagen' => $faker->image('public/storage/category',240,240, null, false),
+            'imagen' => $faker->image('public/storage/category',240,240),
         ]);
     }
 }
